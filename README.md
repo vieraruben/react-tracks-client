@@ -1,10 +1,10 @@
 ## React-Tracks-Api
 
-To open the backend implementation go to: [https://github.com/vieraruben/airbnb-clone-api](https://github.com/vieraruben/airbnb-clone-api)
+To open the backend implementation go to: [https://github.com/vieraruben/react-tracks-api](https://github.com/vieraruben/react-tracks-api)
 
 ## Demo
 
-[https://master.d2nhhpue3pv3dc.amplifyapp.com/](https://master.d2nhhpue3pv3dc.amplifyapp.com/)
+[https://master.d141phkt70dpva.amplifyapp.com/](https://master.d141phkt70dpva.amplifyapp.com/)
 
 ### Use cases
 
