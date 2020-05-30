@@ -61,9 +61,7 @@ export default function Home() {
       }
       setIsLoading(true);
       try {
-        await updateLoadedTracks()
-        const myLikesHash = await loadLikesHash();
-        setMyLikesHash(myLikesHash)
+        await loadTracksAndLikes()
         setOpen(true)
       } catch (e) {
         onError(e);
@@ -75,9 +73,16 @@ export default function Home() {
     onLoad();
   }, [isAuthenticated]);
 
-  async function updateLoadedTracks() {
+  async function loadTracksAndLikes() {
     const tracks = await loadTracks();
+    const likesHash = await loadLikesHash();
+    console.log('likesHash ' + JSON.stringify(likesHash))
     setTracks(tracks);
+    setMyLikesHash(likesHash);
+  }
+
+  function loadLikesHash() {
+    return API.get("tracks", "/listAllLikes")
   }
 
   function loadTracks() {
@@ -103,7 +108,7 @@ export default function Home() {
 
     try {
       await deleteTrack(sk)
-      await updateLoadedTracks()
+      await loadTracksAndLikes()
     } catch (error) {
       console.log(error)
     }
@@ -128,7 +133,7 @@ export default function Home() {
         <Container maxWidth="md">
           <TrackList 
             tracks={tracks} 
-            updateLoadedTracks={updateLoadedTracks}
+            loadTracksAndLikes={loadTracksAndLikes}
             owner={true}
             myLikesHash={myLikesHash}
             handleDelete={handleDelete}
