@@ -1,4 +1,4 @@
-## React-Tracks-Api
+## React-Tracks-Client
 
 To open the backend implementation go to: [https://github.com/vieraruben/react-tracks-api](https://github.com/vieraruben/react-tracks-api)
 
