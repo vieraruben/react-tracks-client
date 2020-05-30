@@ -110,11 +110,8 @@ export default function Home() {
 
   return (
     <div className={classes.root}>
-      {/* {isAuthenticated ? renderNotes() : renderLander()} */}
-      <React.Fragment>
+      {isAuthenticated && <React.Fragment>
         <CssBaseline />
-
-
         <Container maxWidth="md">
           <Box display="flex" justifyContent="center" m={1} p={1} >
             <SearchButton
@@ -147,7 +144,7 @@ export default function Home() {
             <AddIcon />
           </Fab>
         </Tooltip>
-      </React.Fragment>
+      </React.Fragment>}
     </div>
   );
 }
