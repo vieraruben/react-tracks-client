@@ -138,13 +138,14 @@ export default function NewTrack() {
                 </label>
               </div>
               <div>
-                <Button variant="contained" 
+                {fileName && <Button variant="contained" 
                   color="primary" 
                   component="span" 
                   type="submit"
-                  onClick={handleSubmit}>
-                  Upload {isLoading && <CircularProgress style={{marginLeft: '5px'}} color="secondary" size="1em" />}
-                </Button>
+                  onClick={handleSubmit}
+                  >
+                  {isLoading && <CircularProgress style={{marginLeft: '5px'}} color="secondary" size="1em" />} Upload
+                </Button>}
               </div>
             </form>
           </div>
