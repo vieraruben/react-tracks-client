@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-export default function Home() {
+export default function Uploads() {
   const [tracks, setTracks] = useState([]);
   const { isAuthenticated } = useAppContext();
   const [isLoading, setIsLoading] = useState(true);
